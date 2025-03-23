@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://hqui5hbijawn"]
+
+[ext_resource type="Script" path="res://scenes/lamp.gd" id="1_c7ltg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1gkt6"]
+albedo_color = Color(0.6, 0, 0, 1)
+
+[node name="Lamp" type="CSGCombiner3D"]
+use_collision = true
+script = ExtResource("1_c7ltg")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, 0)
+radius = 0.25
+height = 0.25
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+radius = 0.125
+height = 0.5
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.75, 0)
+polygon = PackedVector2Array(0, 0, 0, 1, 0.508921, 0.993312, 1, 0)
+mode = 1
+spin_degrees = 360.0
+spin_sides = 12
+material = SubResource("StandardMaterial3D_1gkt6")

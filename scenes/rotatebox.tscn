@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://d034lrtwpu2l1"]
+
+[ext_resource type="Script" path="res://scenes/rotatebox.gd" id="1_rbjvk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6qr4q"]
+albedo_color = Color(0.6, 0.737255, 0.223529, 1)
+
+[node name="CSGBox3D8" type="CSGBox3D"]
+transform = Transform3D(0.707107, -0.707107, 0, 0.5, 0.5, -0.707107, 0.5, 0.5, 0.707107, 0, 0, 0)
+operation = 2
+flip_faces = true
+material = SubResource("StandardMaterial3D_6qr4q")
+script = ExtResource("1_rbjvk")

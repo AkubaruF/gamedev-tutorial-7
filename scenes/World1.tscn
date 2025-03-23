@@ -1,0 +1,62 @@
+[gd_scene load_steps=2 format=3 uid="uid://ba0gchqii7emi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_15wme"]
+albedo_color = Color(0.6, 0.737255, 0.223529, 1)
+
+[node name="World 1" type="Node3D"]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="Room 1" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(50, 0, 0, 0, 5, 0, 0, 0, 30, -5.93523, 2.5, 0)
+use_collision = true
+flip_faces = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 1, -14.5014, -2.5, 0)
+flip_faces = true
+size = Vector3(4, 1, 30)
+material = SubResource("StandardMaterial3D_15wme")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.61007, -1.54962, -1.47386)
+operation = 2
+flip_faces = true
+material = SubResource("StandardMaterial3D_15wme")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.10847, -1.81658, -7.69915)
+operation = 2
+flip_faces = true
+material = SubResource("StandardMaterial3D_15wme")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8412, -1.14391, -3.75873)
+operation = 2
+flip_faces = true
+material = SubResource("StandardMaterial3D_15wme")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.143, -1.14391, 3.96375)
+operation = 2
+flip_faces = true
+material = SubResource("StandardMaterial3D_15wme")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.1923, -1.14391, -2.0137)
+operation = 2
+flip_faces = true
+material = SubResource("StandardMaterial3D_15wme")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.7522, -1.14391, 9.48784)
+operation = 2
+flip_faces = true
+material = SubResource("StandardMaterial3D_15wme")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.89, -1.14391, 13.8085)
+operation = 2
+flip_faces = true
+material = SubResource("StandardMaterial3D_15wme")

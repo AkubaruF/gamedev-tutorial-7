@@ -1,6 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://65h4c0mrp6k7"]
+[gd_scene load_steps=10 format=3 uid="uid://65h4c0mrp6k7"]
 
-[ext_resource type="PackedScene" path="res://Scenes/Box.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://bp0fmra4ff2ho" path="res://scenes/Box.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://18bykrs5tibl" path="res://scenes/Player.tscn" id="2_gpfj2"]
+[ext_resource type="Script" path="res://scenes/Switch.gd" id="2_yowir"]
 
 [sub_resource type="StandardMaterial3D" id="3"]
 albedo_color = Color(0.498039, 0.498039, 0.498039, 1)
@@ -12,11 +14,11 @@ size = Vector2(50, 50)
 [sub_resource type="BoxShape3D" id="2"]
 size = Vector3(50, 0, 50)
 
-[sub_resource type="StandardMaterial3D" id="6"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sys4l"]
 albedo_color = Color(1, 0, 0, 1)
 
 [sub_resource type="BoxMesh" id="4"]
-material = SubResource("6")
+material = SubResource("StandardMaterial3D_sys4l")
 
 [sub_resource type="BoxShape3D" id="5"]
 
@@ -67,6 +69,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 25.0375)
 mesh = SubResource("4")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Switch"]
+script = ExtResource("2_yowir")
+light = NodePath("../../OmniLight3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Switch/StaticBody3D"]
 shape = SubResource("5")
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("2_gpfj2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.977854, 1.25, 2.28895)
